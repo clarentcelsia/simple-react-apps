@@ -1,0 +1,39 @@
+.ImageForm{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+}
+
+div .d-image{
+    margin-bottom: 10px;
+}
+
+div .form-text{
+    margin-top: 1em;
+}
+
+
+/* Props; </> */
+form{
+    /* top, right, bottom, left*/
+    margin: 2em 1em 0em 0.5em;
+}
+
+#btn-submit{
+    margin: 1em 1em 2em 0em;
+}
+
+#input-file{
+    margin-top: 1.2em;
+}
+
+/*label{
+    top, right, bottom, left
+    margin: 1em 0.5em 1em 0em;
+} */
