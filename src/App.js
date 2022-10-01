@@ -2,8 +2,8 @@
 import './App.css';
 
 import React from "react";
-import AppForm from "./components/AppForm";
-import AppTable from './components/AppTable';
+import AppForm from "./react-form/components/AppForm";
+import AppTable from './react-form/components/AppTable';
 import { Grid } from '@mui/material';
 
 // Preparing data
