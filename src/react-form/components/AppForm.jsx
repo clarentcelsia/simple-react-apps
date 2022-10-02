@@ -132,7 +132,7 @@ const AppForm = ({submit}) => {
                     required/>
             </div>
             <div>
-                <Button id="btn-submit" variant="contained" size="small" type="submit">Submit</Button>
+                <Button id="btn-submit" variant="contained" size="small" type="submit" color="secondary">Submit</Button>
             </div>
         </form>
         </Card>
