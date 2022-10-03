@@ -3,6 +3,7 @@
 import axios from "axios";
 import React from "react";
 import MovieListAx from "../containers/MovieListAx";
+import { Link } from 'react-router-dom'
 
 // Call the api 
 const mov = axios.create({
@@ -29,7 +30,9 @@ const AppEffect = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{margin:"2em"}}>
+            <Link to="/">Home</Link>
+
             <MovieListAx movie={data_}/>
         </div>
     )
