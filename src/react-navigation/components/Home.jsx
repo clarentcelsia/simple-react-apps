@@ -14,6 +14,7 @@ const Home = () => {
                 <Link to="/effect" style={{marginRight:"1em"}}>Effect</Link>
                 <Link to="/list" style={{marginRight:"1em"}}>List</Link>
                 <Link to="/form" style={{marginRight:"1em"}}>Form</Link>
+                <Link to="/redux" style={{marginRight:"1em"}}>Redux</Link>
             </nav>
         </div>
     )

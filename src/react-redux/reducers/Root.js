@@ -1,3 +1,5 @@
+// See. App.js
+// Create manual redux-reducer
 const InitialValue = {
     user:"user",
     counter:1000
