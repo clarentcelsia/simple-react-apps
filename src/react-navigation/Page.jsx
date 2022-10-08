@@ -6,7 +6,13 @@ import MovieList from "../react-list/containers/MovieList";
 import Home from "./components/Home";
 import About from "./components/About";
 import Form from "../react-form/FormPage";
-import Param from "./components/Param";
+import {Param, SearchParam} from "./components/Param";
+import { Provider } from "react-redux";
+// import { legacy_createStore as createStore } from "redux";
+// import { InitialValue, RootReducer } from "../react-redux/reducers/Root";
+import CounterRedux from "../react-redux/containers/CounterRedux";
+
+import { AppStore } from "../react-redux/apps/store";
 
 /*  Router components:
 https://v5.reactrouter.com/web/guides/primary-components
@@ -23,9 +29,13 @@ https://v5.reactrouter.com/web/guides/primary-components
 
 // https://reactrouter.com/en/v6.3.0/getting-started/tutorial
 const AppRouter = () => {
+    /** This store will be defined in apps/store using redux toolkit. */
+    // const store = createStore(RootReducer, InitialValue);
+
     return (
         <>
         {/* Define routes */}
+        <Provider store={AppStore}>
         <Router>
             {/* Starting from react-router-dom@v6 <Switch/> has been replaced by <Routes/>*/}
             <Routes>
@@ -45,11 +55,15 @@ const AppRouter = () => {
                     </main>
                 }/>
 
-                {/* Example using useParam() */}
+                {/* Example using useParam(), and useSearchParam() */}
                 <Route path="/element/:id" element={<Param/>}/>
-                <Route path="/element?q=id" element={<Param/>}/>
+                <Route exact path="/element" element={<SearchParam/>}/>
+
+                {/* Redux-reducer */}
+                <Route path="/redux" element={<CounterRedux/>}/>
             </Routes>
         </Router>
+        </Provider>
         </>
     )
 };
