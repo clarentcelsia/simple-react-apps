@@ -21,7 +21,7 @@ export const AppStore = configureStore({
         // note. using [] cause js doesnt support dot usage in object as key
         [ColorAPI.reducerPath]: ColorAPI.reducer,
     },
-    // For advance setup -> caching, invalidation, polling data (controlling device waits for an external device to check for its readiness or state).
+    // For advanced settings -> caching, invalidation, polling data (controlling device waits for an external device to check for its readiness or state).
     // ...
     middleware: (getDefaultMiddleware)=>{
         // Concatenating the created endpoint with default.
