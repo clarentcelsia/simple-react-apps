@@ -13,6 +13,7 @@ import { Provider } from "react-redux";
 import CounterRedux from "../react-redux/containers/CounterRedux";
 
 import { AppStore } from "../react-redux/apps/store";
+import CounterReduxThunk from "../react-redux/containers/CounterReduxThunk";
 
 /*  Router components:
 https://v5.reactrouter.com/web/guides/primary-components
@@ -60,7 +61,10 @@ const AppRouter = () => {
                 <Route exact path="/element" element={<SearchParam/>}/>
 
                 {/* Redux-reducer */}
-                <Route path="/redux" element={<CounterRedux/>}/>
+                <Route exact path="/redux" element={<CounterRedux/>}/>
+                 {/* Thunk */}
+                <Route path="/redux-thunk" element={<CounterReduxThunk/>}/>
+
             </Routes>
         </Router>
         </Provider>
