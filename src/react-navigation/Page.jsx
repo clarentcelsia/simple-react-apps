@@ -14,6 +14,7 @@ import CounterRedux from "../react-redux/containers/CounterRedux";
 
 import { AppStore } from "../react-redux/apps/store";
 import CounterReduxThunk from "../react-redux/containers/CounterReduxThunk";
+import CounterZustandContainer from "../react-zustand/containers/CounterZustandContainer";
 
 /*  Router components:
 https://v5.reactrouter.com/web/guides/primary-components
@@ -62,8 +63,10 @@ const AppRouter = () => {
 
                 {/* Redux-reducer */}
                 <Route exact path="/redux" element={<CounterRedux/>}/>
-                 {/* Thunk */}
+                {/* Thunk */}
                 <Route path="/redux-thunk" element={<CounterReduxThunk/>}/>
+                {/* Zustand */}
+                <Route path="/zustand" element={<CounterZustandContainer/>}/>
 
             </Routes>
         </Router>
