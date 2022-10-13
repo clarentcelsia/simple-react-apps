@@ -12,15 +12,22 @@ import { useStore,
     selectIncrementByAmountAction,
     selectDecrementByAmountAction,
 } from "../apps/store"; 
-import useUserStore, { selectUser, selectUserById } from "../apps/user";
+// import useUserStore, { selectUser, selectUserById } from "../apps/user";
+import useLoaderStore, { selectError, selectFetchUserById, selectLoading, selectUser } from "../apps/userLoader";
 
 const CounterZustandContainer = () => {
     const [currAmount, setCurrAmount] = useState(0);
     const [userId, setUserId] = useState(0);
 
     // selector for api
-    const user = useUserStore(selectUser);
-    const fetchUserID = useUserStore(selectUserById);
+    // const user = useUserStore(selectUser);
+    // const fetchUserID = useUserStore(selectUserById);
+
+    // Here we gonna apply loader
+    const user = useLoaderStore(selectUser);
+    const loading = useLoaderStore(selectLoading);
+    const error = useLoaderStore(selectError);
+    const fetchUserID = useLoaderStore(selectFetchUserById);
 
     const counter = useStore(selectCounter);
     const incrementCounter = useStore(selectIncrementAction);
@@ -77,6 +84,8 @@ const CounterZustandContainer = () => {
         </Typography>
 
         <Avatar src={user.avatar} alt="avatar" sx={{ width: 64, height: 64 }} />
+
+        {loading? <>Loading...</>: <></>}
 
         <Typography variant="body1" component="div">
           Nama User: {user.first_name}
