@@ -15,6 +15,10 @@ import CounterRedux from "../react-redux/containers/CounterRedux";
 import { AppStore } from "../react-redux/apps/store";
 import CounterReduxThunk from "../react-redux/containers/CounterReduxThunk";
 import CounterZustandContainer from "../react-zustand/containers/CounterZustandContainer";
+import Dashboard from "../react-auth/Dashboard";
+import LoginPage from "../react-auth/containers/Login";
+import RegisterPage from "../react-auth/containers/Register";
+import ProtectedRoutes from "../react-auth/components/Protected";
 
 /*  Router components:
 https://v5.reactrouter.com/web/guides/primary-components
@@ -67,6 +71,14 @@ const AppRouter = () => {
                 <Route path="/redux-thunk" element={<CounterReduxThunk/>}/>
                 {/* Zustand */}
                 <Route path="/zustand" element={<CounterZustandContainer/>}/>
+                {/* Firebase */}
+                <Route path="/firebase" element={
+                    <ProtectedRoutes>
+                         <Dashboard/>
+                    </ProtectedRoutes>
+               }/>
+                <Route path="/login" element={<LoginPage/>}/>
+                <Route path="/register" element={<RegisterPage/>}/>
 
             </Routes>
         </Router>

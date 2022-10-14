@@ -17,6 +17,8 @@ const Home = () => {
                 <Link to="/redux" style={{marginRight:"1em"}}>Redux</Link>
                 <Link to="/redux-thunk" style={{marginRight:"1em"}}>Redux-Thunk</Link>
                 <Link to="/zustand" style={{marginRight:"1em"}}>Zustand</Link>
+                <Link to="/firebase" style={{marginRight:"1em"}}>Firebase</Link>
+
             </nav>
         </div>
     )
